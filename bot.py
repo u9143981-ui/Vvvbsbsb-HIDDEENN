@@ -351,7 +351,7 @@ def start_bot():
     logger.info("Bot is starting...")
     try:
         bot.delete_webhook()
-        # non_stop=True add karo
-        bot.infinity_polling(timeout=30, long_polling_timeout=25, non_stop=True)
+        # non_stop=True hata do, sirf ye rakho:
+        bot.infinity_polling(timeout=30, long_polling_timeout=25)
     except Exception as e:
         logger.error(f"Bot error: {e}")
